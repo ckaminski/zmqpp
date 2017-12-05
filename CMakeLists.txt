@@ -24,6 +24,7 @@ enable_testing()
 
 hunter_add_package(ZeroMQ)
 find_package(ZeroMQ CONFIG REQUIRED)
+message("CKAMINSKI: CXX_FLAGS: ${CMAKE_CXX_FLAGS}")
 if(NOT MSVC)
   string(REGEX MATCH "-std=c[+][+]11" CXX11_PRESENTED "${CMAKE_CXX_FLAGS}")
   if(NOT CXX11_PRESENTED)
